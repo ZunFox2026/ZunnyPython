@@ -1,0 +1,80 @@
+/* Bài 30: Tìm hiểu về Media Queries */
+/* Media Queries là một tính năng của CSS giúp chúng ta áp dụng các phong cách khác nhau tùy thuộc vào các điều kiện khác nhau như chiều rộng màn hình, chiều cao màn hình, thiết bị,... */
+
+/* Ví dụ 1: Áp dụng phong cách cho màn hình có chiều rộng tối đa 768px */
+@media (max-width: 768px) {
+  /* Thay đổi màu nền của body khi chiều rộng màn hình nhỏ hơn hoặc bằng 768px */
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  /* Thay đổi font-size của tiêu đề khi chiều rộng màn hình nhỏ hơn hoặc bằng 768px */
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Ví dụ 2: Áp dụng phong cách cho màn hình có chiều rộng tối thiểu 1024px */
+@media (min-width: 1024px) {
+  /* Thay đổi màu nền của body khi chiều rộng màn hình lớn hơn hoặc bằng 1024px */
+  body {
+    background-color: #fff;
+  }
+  
+  /* Thay đổi font-size của tiêu đề khi chiều rộng màn hình lớn hơn hoặc bằng 1024px */
+  h1 {
+    font-size: 36px;
+  }
+}
+
+/* Ví dụ 3: Áp dụng phong cách cho màn hình có chiều rộng nằm trong khoảng từ 768px đến 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Thay đổi màu nền của body khi chiều rộng màn hình nằm trong khoảng từ 768px đến 1024px */
+  body {
+    background-color: #ccc;
+  }
+  
+  /* Thay đổi font-size của tiêu đề khi chiều rộng màn hình nằm trong khoảng từ 768px đến 1024px */
+  h1 {
+    font-size: 30px;
+  }
+}
+
+/* Ví dụ 4: Áp dụng phong cách cho thiết bị di động */
+@media only screen and (max-width: 768px) {
+  /* Thay đổi màu nền của body khi xem trên thiết bị di động */
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  /* Thay đổi font-size của tiêu đề khi xem trên thiết bị di động */
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Ví dụ 5: Áp dụng phong cách cho màn hình có chiều cao tối đa 600px */
+@media (max-height: 600px) {
+  /* Thay đổi màu nền của body khi chiều cao màn hình nhỏ hơn hoặc bằng 600px */
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  /* Thay đổi font-size của tiêu đề khi chiều cao màn hình nhỏ hơn hoặc bằng 600px */
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Ví dụ 6: Áp dụng phong cách cho màn hình có chiều rộng và chiều cao tối đa */
+@media (max-width: 1024px) and (max-height: 768px) {
+  /* Thay đổi màu nền của body khi chiều rộng và chiều cao màn hình nhỏ hơn hoặc bằng 1024px và 768px */
+  body {
+    background-color: #f2f2f2;
+  }
+  
+  /* Thay đổi font-size của tiêu đề khi chiều rộng và chiều cao màn hình nhỏ hơn hoặc bằng 1024px và 768px */
+  h1 {
+    font-size: 24px;
+  }
+}
