@@ -1,0 +1,1 @@
+Bạn có thể cho mình biết cụ thể bài toán “bài 9, cấp Cơ bản” yêu cầu gì吗? Ví dụ: đầu vào, đầu ra, và những điều kiện cụ thể của bài toán là gì để mình có thể viết mã Python chính xác và đáp ứng yêu cầu của bạn.
