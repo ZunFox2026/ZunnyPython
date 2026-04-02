@@ -1,0 +1,88 @@
+/* Bài 18: Tìm hiểu về Accessibility */
+/* Phần này sẽ áp dụng các style cơ bản để cải thiện khả năng truy cập */
+body {
+  /* Thiết lập font mặc định cho toàn bộ trang web */
+  font-family: Arial, sans-serif;
+  /* Thiết lập kích thước font mặc định */
+  font-size: 16px;
+  /* Thiết lập màu sắc và độ tương phản phù hợp */
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Sử dụng selector để chọn các phần tử cụ thể và áp dụng style */
+h1, h2, h3 {
+  /* Thiết lập màu sắc và kích thước cho các tiêu đề */
+  color: #00698f;
+  font-weight: bold;
+}
+
+/* Áp dụng style cho các liên kết */
+a {
+  /* Thiết lập màu sắc và độ tương phản cho các liên kết */
+  color: #337ab7;
+  text-decoration: underline;
+}
+
+/* Áp dụng style cho các nút bấm */
+button {
+  /* Thiết lập màu sắc, kích thước và độ tương phản cho các nút bấm */
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Áp dụng style cho các phần tử có focus */
+button:focus, a:focus {
+  /* Thiết lập màu sắc và độ tương phản khi phần tử được focus */
+  outline: #4CAF50 solid 2px;
+}
+
+/* Áp dụng style cho các phần tử có hover */
+button:hover, a:hover {
+  /* Thiết lập màu sắc và độ tương phản khi phần tử được di chuột qua */
+  background-color: #3e8e41;
+  color: #fff;
+}
+
+/* Sử dụng media query để áp dụng style cho các thiết bị di động */
+@media only screen and (max-width: 768px) {
+  /* Thiết lập kích thước font và khoảng cách cho các phần tử trên thiết bị di động */
+  body {
+    font-size: 14px;
+  }
+  h1, h2, h3 {
+    font-size: 18px;
+  }
+}
+
+/* Áp dụng style cho các hình ảnh */
+img {
+  /* Thiết lập kích thước và độ tương phản cho các hình ảnh */
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+/* Áp dụng style cho các bảng */
+table {
+  /* Thiết lập màu sắc, kích thước và độ tương phản cho các bảng */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  /* Thiết lập màu sắc, kích thước và độ tương phản cho các ô bảng */
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  /* Thiết lập màu sắc và độ tương phản cho các ô tiêu đề bảng */
+  background-color: #f0f0f0;
+}
