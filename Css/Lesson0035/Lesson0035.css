@@ -1,0 +1,67 @@
+/* Bài 35: Tìm hiểu về Media Queries */
+/* Media Queries là một cách để áp dụng các phong cách khác nhau dựa trên các điều kiện nhất định như độ rộng màn hình, thiết bị, hướng màn hình,... */
+
+/* Ví dụ 1: Áp dụng phong cách cho màn hình có độ rộng tối thiểu là 768px */
+@media (min-width: 768px) {
+  /* Chọn tất cả các phần tử có class là 'container' */
+  .container {
+    /* Đặt chiều rộng là 80% so với chiều rộng của phần tử cha */
+    width: 80%;
+    /* Đặt màu nền là xanh lá cây */
+    background-color: #008000;
+    /* Đặt màu chữ là trắng */
+    color: #ffffff;
+  }
+}
+
+/* Ví dụ 2: Áp dụng phong cách cho màn hình có độ rộng tối đa là 480px */
+@media (max-width: 480px) {
+  /* Chọn tất cả các phần tử có id là 'header' */
+  #header {
+    /* Đặt chiều cao là 50px */
+    height: 50px;
+    /* Đặt màu nền là xanh da trời */
+    background-color: #0000ff;
+    /* Đặt màu chữ là vàng */
+    color: #ffff00;
+  }
+}
+
+/* Ví dụ 3: Áp dụng phong cách cho màn hình có độ rộng nằm trong khoảng từ 481px đến 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Chọn tất cả các phần tử có class là 'menu' */
+  .menu {
+    /* Đặt chiều rộng là 50% so với chiều rộng của phần tử cha */
+    width: 50%;
+    /* Đặt màu nền là xám */
+    background-color: #808080;
+    /* Đặt màu chữ là đen */
+    color: #000000;
+  }
+}
+
+/* Ví dụ 4: Áp dụng phong cách cho màn hình có hướng là ngang */
+@media (orientation: landscape) {
+  /* Chọn tất cả các phần tử có id là 'content' */
+  #content {
+    /* Đặt chiều rộng là 70% so với chiều rộng của phần tử cha */
+    width: 70%;
+    /* Đặt màu nền là tím */
+    background-color: #800080;
+    /* Đặt màu chữ là trắng */
+    color: #ffffff;
+  }
+}
+
+/* Ví dụ 5: Áp dụng phong cách cho màn hình có hướng là dọc */
+@media (orientation: portrait) {
+  /* Chọn tất cả các phần tử có class là 'footer' */
+  .footer {
+    /* Đặt chiều cao là 30px */
+    height: 30px;
+    /* Đặt màu nền là đỏ */
+    background-color: #ff0000;
+    /* Đặt màu chữ là vàng */
+    color: #ffff00;
+  }
+}
