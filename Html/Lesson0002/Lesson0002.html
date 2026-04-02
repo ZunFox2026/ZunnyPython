@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu HTML5 -->
+<html>
+<!-- Thẻ <html> là thẻ gốc của tài liệu HTML -->
+<head>
+    <!-- Thẻ <head> chứa thông tin về tài liệu -->
+    <title>Tạo Form Đăng Nhập</title>
+    <!-- Tiêu đề trang web -->
+    <style>
+        /* CSS viết trong thẻ <style> */
+        body {
+            /* Thiết lập màu nền và font cho trang web */
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-dang-nhap {
+            /* Thiết lập estilo cho form đăng nhập */
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-dang-nhap h2 {
+            /* Thiết lập tiêu đề form đăng nhập */
+            text-align: center;
+            color: #337ab7;
+        }
+        
+        .form-dang-nhap input[type="text"], .form-dang-nhap input[type="password"] {
+            /* Thiết lập estilo cho input */
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        .form-dang-nhap input[type="submit"] {
+            /* Thiết lập estilo cho nút submit */
+            width: 100%;
+            height: 40px;
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .form-dang-nhap input[type="submit"]:hover {
+            /* Thiết lập hiệu ứng hover cho nút submit */
+            background-color: #23527c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thẻ <body> chứa nội dung trang web -->
+    <div class="form-dang-nhap">
+        <!-- Tạo form đăng nhập -->
+        <h2>Đăng Nhập</h2>
+        <!-- Tiêu đề form đăng nhập -->
+        <form>
+            <!-- Tạo form -->
+            <input type="text" placeholder="Tên đăng nhập" required>
+            <!-- Input tên đăng nhập -->
+            <input type="password" placeholder="Mật khẩu" required>
+            <!-- Input mật khẩu -->
+            <input type="submit" value="Đăng Nhập">
+            <!-- Nút submit -->
+        </form>
+    </div>
+</body>
+</html>
