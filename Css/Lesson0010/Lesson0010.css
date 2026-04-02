@@ -1,0 +1,68 @@
+/* Bài 10: Tạo Hình Nền */
+/* Phần này sẽ giải thích về cách tạo hình nền cho trang web */
+
+/* Selector toàn bộ trang web */
+body {
+  /* Thiết lập màu nền cho trang web */
+  background-color: #f2f2f2;
+  /* Thiết lập hình nền cho trang web */
+  background-image: url('background.jpg');
+  /* Thiết lập cáchrepeat hình nền */
+  background-repeat: no-repeat;
+  /* Thiết lập vị trí hình nền */
+  background-position: center;
+  /* Thiết lập kích thước hình nền */
+  background-size: cover;
+}
+
+/* Selector cho phần header */
+header {
+  /* Thiết lập màu nền cho phần header */
+  background-color: #333;
+  /* Thiết lập chiều cao cho phần header */
+  height: 100px;
+  /* Thiết lập màu chữ cho phần header */
+  color: #fff;
+  /* Thiết lập căn giữa cho phần header */
+  text-align: center;
+}
+
+/* Selector cho phần nội dung */
+.content {
+  /* Thiết lập màu nền cho phần nội dung */
+  background-color: #fff;
+  /* Thiết lập kích thước phần nội dung */
+  width: 80%;
+  /* Thiết lập căn giữa cho phần nội dung */
+  margin: 0 auto;
+  /* Thiết lập padding cho phần nội dung */
+  padding: 20px;
+}
+
+/* Selector cho phần footer */
+footer {
+  /* Thiết lập màu nền cho phần footer */
+  background-color: #333;
+  /* Thiết lập chiều cao cho phần footer */
+  height: 50px;
+  /* Thiết lập màu chữ cho phần footer */
+  color: #fff;
+  /* Thiết lập căn giữa cho phần footer */
+  text-align: center;
+}
+
+/* Ví dụ về cách sử dụng linear-gradient */
+.linear-gradient {
+  /* Thiết lập màu nền cho phần này */
+  background-image: linear-gradient(to bottom, #f2f2f2, #ccc);
+  /* Thiết lập chiều cao cho phần này */
+  height: 200px;
+}
+
+/* Ví dụ về cách sử dụng radial-gradient */
+.radial-gradient {
+  /* Thiết lập màu nền cho phần này */
+  background-image: radial-gradient(circle, #f2f2f2, #ccc);
+  /* Thiết lập chiều cao cho phần này */
+  height: 200px;
+}
