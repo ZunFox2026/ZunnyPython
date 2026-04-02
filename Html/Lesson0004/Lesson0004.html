@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu HTML5 -->
+<html>
+<!-- Phần head chứa thông tin về tài liệu, không hiển thị trên trình duyệt -->
+<head>
+    <!-- Thẻ title hiển thị tiêu đề của trang web trên thanh tiêu đề trình duyệt -->
+    <title>Tạo hiệu ứng hình ảnh</title>
+    <!-- Thẻ style chứa mã CSS để tạo kiểu và bố cục cho trang web -->
+    <style>
+        /* Tạo hiệu ứng hình ảnh khi di chuột vào */
+        .hinh-anh {
+            width: 300px; /* Chiều rộng của hình ảnh */
+            height: 200px; /* Chiều cao của hình ảnh */
+            border: 1px solid #ccc; /* Đường viền của hình ảnh */
+            border-radius: 10px; /* Bo góc hình ảnh */
+            transition: all 0.5s; /* Thời gian chuyển đổi hiệu ứng */
+        }
+        
+        .hinh-anh:hover {
+            transform: scale(1.1); /* Tăng kích thước hình ảnh khi di chuột vào */
+            box-shadow: 0 0 10px #666; /* Tạo bóng cho hình ảnh khi di chuột vào */
+        }
+        
+        /* Tạo hiệu ứng hình ảnh khi click vào */
+        .hinh-anh:active {
+            transform: scale(0.9); /* Giảm kích thước hình ảnh khi click vào */
+            box-shadow: 0 0 5px #666; /* Tạo bóng cho hình ảnh khi click vào */
+        }
+        
+        /* Tạo hiệu ứng hình ảnh khi chọn */
+        .hinh-anh:focus {
+            outline: none; /* Loại bỏ đường viền khi chọn */
+            box-shadow: 0 0 10px #666; /* Tạo bóng cho hình ảnh khi chọn */
+        }
+    </style>
+</head>
+<!-- Phần body chứa nội dung của trang web -->
+<body>
+    <!-- Tạo một hình ảnh với hiệu ứng khi di chuột vào, click vào, chọn -->
+    <img class="hinh-anh" src="https://picsum.photos/300/200" alt="Hình ảnh mẫu">
+    <!-- Giải thích về hiệu ứng hình ảnh -->
+    <p>Đây là một hình ảnh có hiệu ứng khi di chuột vào, click vào, chọn. Hãy thử di chuột vào hình ảnh, click vào hình ảnh, chọn hình ảnh để xem hiệu ứng.</p>
+</body>
+</html>
