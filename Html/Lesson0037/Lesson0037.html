@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu HTML5 -->
+<html>
+<!-- Phần đầu của tài liệu, chứa thông tin chung -->
+<head>
+    <!-- Tiêu đề của trang web -->
+    <title>Tạo hiệu ứng Parallax</title>
+    <!-- Liên kết đến file CSS bên ngoài (nếu có) -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- Phần CSS được viết trực tiếp trong file HTML -->
+    <style>
+        /* CSS cho hiệu ứng Parallax */
+        .background {
+            /* Đặt vị trí ảnh nền */
+            background-attachment: fixed;
+            /* Đặt kích thước ảnh nền */
+            background-size: cover;
+            /* Đặt màu nền (nếu ảnh không phủ hết) */
+            background-color: #cccccc;
+            /* Đặt vị trí ảnh nền (tùy chọn) */
+            background-position: center;
+        }
+        
+        .layer1 {
+            /* Lớp 1: Ảnh nền trên cùng */
+            background-image: url('https://picsum.photos/2000/1000');
+            height: 100vh; /* Chiều cao của lớp */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .layer2 {
+            /* Lớp 2: Nội dung chính */
+            background-color: rgba(255, 255, 255, 0.7); /* Màu nền mờ */
+            padding: 20px; /* Khoảng cách trong */
+            text-align: center; /* Căn giữa nội dung */
+            height: 100vh; /* Chiều cao của lớp */
+        }
+        
+        .layer3 {
+            /* Lớp 3: Ảnh nền dưới cùng */
+            background-image: url('https://picsum.photos/2000/1001');
+            height: 100vh; /* Chiều cao của lớp */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<!-- Phần nội dung của trang web -->
+<body>
+    <!-- Lớp 1: Ảnh nền trên cùng -->
+    <div class="layer1">
+        <!-- Nội dung trên lớp 1 (không bắt buộc) -->
+        <h1 style="color: white; padding-top: 40vh;">Hiệu ứng Parallax</h1>
+    </div>
+    <!-- Lớp 2: Nội dung chính -->
+    <div class="layer2">
+        <!-- Nội dung trên lớp 2 -->
+        <h2>Đây là nội dung chính</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    </div>
+    <!-- Lớp 3: Ảnh nền dưới cùng -->
+    <div class="layer3">
+        <!-- Nội dung trên lớp 3 (không bắt buộc) -->
+        <h1 style="color: white; padding-top: 40vh;">Kết thúc hiệu ứng</h1>
+    </div>
+</body>
+</html>
