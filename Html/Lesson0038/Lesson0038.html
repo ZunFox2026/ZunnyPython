@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu, thông báo cho trình duyệt rằng đây là một trang HTML -->
+<html>
+<!-- Đây là phần mở của tài liệu HTML -->
+<head>
+    <!-- Phần đầu của tài liệu HTML, chứa thông tin về trang web -->
+    <title>Tạo hiệu ứng loading</title>
+    <!-- Tiêu đề của trang web, hiển thị trên thanh tiêu đề của trình duyệt -->
+    <style>
+        /* Đây là phần định nghĩa phong cách cho trang web */
+        body {
+            /* Định dạng cho toàn bộ trang web */
+            font-family: Arial, sans-serif;
+            /* Chọn font chữ cho trang web */
+            background-color: #f0f0f0;
+            /* Màu nền của trang web */
+        }
+        
+        .loading {
+            /* Định dạng cho hiệu ứng loading */
+            position: absolute;
+            /* Vị trí tuyệt đối so với phần tử chứa */
+            top: 50%;
+            /* Vị trí từ trên xuống */
+            left: 50%;
+            /* Vị trí từ trái sang phải */
+            transform: translate(-50%, -50%);
+            /* Di chuyển phần tử đến vị trí trung tâm */
+            width: 100px;
+            /* Chiều rộng của hiệu ứng loading */
+            height: 100px;
+            /* Chiều cao của hiệu ứng loading */
+            border: 10px solid #3498db;
+            /* Đường viền của hiệu ứng loading */
+            border-top: 10px solid #ffffff;
+            /* Màu của đường viền trên cùng */
+            border-radius: 50%;
+            /* Bo tròn các góc của hiệu ứng loading */
+            animation: loading 2s linear infinite;
+            /* Hiệu ứng animation cho hiệu ứng loading */
+        }
+        
+        @keyframes loading {
+            /* Định nghĩa hiệu ứng animation */
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần nội dung của trang web -->
+    <div class="loading"></div>
+    <!-- Đây là phần tử chứa hiệu ứng loading -->
+    <!-- Khi chạy trang web, bạn sẽ thấy một vòng tròn loading màu xanh lam -->
+</body>
+</html>
