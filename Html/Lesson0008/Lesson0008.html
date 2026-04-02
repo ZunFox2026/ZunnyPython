@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Đây là khai báo loại tài liệu HTML5 -->
+<html>
+<!-- Đây là phần bắt đầu của tài liệu HTML -->
+<head>
+    <!-- Phần này chứa thông tin về tài liệu HTML -->
+    <title>Tạo hiệu ứng tương tác</title>
+    <!-- Tiêu đề của trang web -->
+    <style>
+        /* CSS viết trong thẻ style */
+        body {
+            /* Thiết lập màu nền cho trang web */
+            background-color: #f2f2f2;
+            /* Thiết lập font chữ và kích thước */
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        
+        .box {
+            /* Tạo một lớp box để chứa các phần tử */
+            width: 200px;
+            height: 200px;
+            background-color: #4CAF50;
+            /* Thiết lập màu nền và hiệu ứng hover */
+            transition: background-color 0.5s;
+            margin: 20px auto;
+            /* Thiết lập vị trí và kích thước */
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        
+        .box:hover {
+            /* Thiết lập hiệu ứng khi di chuột vào phần tử */
+            background-color: #3e8e41;
+        }
+        
+        .button {
+            /* Tạo một lớp button để chứa các nút bấm */
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        
+        .button:hover {
+            /* Thiết lập hiệu ứng khi di chuột vào nút bấm */
+            background-color: #3e8e41;
+        }
+        
+        .animation {
+            /* Tạo một lớp animation để chứa các phần tử có hiệu ứng */
+            width: 50px;
+            height: 50px;
+            background-color: #4CAF50;
+            position: relative;
+            animation: move 2s infinite;
+        }
+        
+        @keyframes move {
+            /* Định nghĩa hiệu ứng di chuyển */
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(100px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần này chứa nội dung của trang web -->
+    <h1 style="text-align: center;">Tạo hiệu ứng tương tác</h1>
+    <!-- Tiêu đề của trang web -->
+    <div class="box">
+        <!-- Tạo một phần tử box -->
+        <p>Đây là một phần tử có hiệu ứng hover</p>
+        <!-- Nội dung của phần tử box -->
+    </div>
+    <button class="button">Nút bấm có hiệu ứng hover</button>
+    <!-- Tạo một nút bấm có hiệu ứng hover -->
+    <div class="animation"></div>
+    <!-- Tạo một phần tử có hiệu ứng di chuyển -->
+</body>
+</html>
