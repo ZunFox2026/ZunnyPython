@@ -1,0 +1,96 @@
+/* Bài 21: Tìm hiểu về Accessibility trong CSS */
+/* Phần 1: Giới thiệu về Accessibility */
+/* Accessibility là khả năng truy cập của một trang web đối với tất cả người dùng, bao gồm cả những người có khả năng hạn chế */
+/* Để cải thiện Accessibility, chúng ta cần sử dụng các selector và property phù hợp trong CSS */
+
+/* Sử dụng màu sắc phù hợp để cải thiện khả năng đọc */
+body {
+  /* Màu nền và màu văn bản nên có độ tương phản cao */
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Sử dụng font-size và line-height phù hợp */
+p {
+  /* Font-size nên lớn hơn 16px để dễ đọc */
+  font-size: 18px;
+  /* Line-height nên lớn hơn 1.5 để giảm thiểu độ chồng chéo của văn bản */
+  line-height: 1.6;
+}
+
+/* Phần 2: Sử dụng selector và property để cải thiện Accessibility */
+/* Sử dụng :focus và :hover để cung cấp thông tin về trạng thái của các phần tử */
+button {
+  /* Khi button được hover, màu nền sẽ thay đổi để cung cấp thông tin về trạng thái */
+  background-color: #ccc;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #aaa;
+}
+
+button:focus {
+  /* Khi button được focus, màu nền sẽ thay đổi để cung cấp thông tin về trạng thái */
+  background-color: #666;
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+}
+
+/* Sử dụng ::before và ::after để cung cấp thông tin về trạng thái của các phần tử */
+input[type="checkbox"] {
+  /* Thêm một biểu tượng trước checkbox để cung cấp thông tin về trạng thái */
+  position: relative;
+  padding-left: 20px;
+}
+
+input[type="checkbox"]::before {
+  content: "\2610";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2611";
+}
+
+/* Phần 3: Sử dụng property để cải thiện Accessibility */
+/* Sử dụng property display để ẩn hoặc hiển thị các phần tử */
+.screen-reader-only {
+  /* Ẩn phần tử khỏi màn hình nhưng vẫn cho phép screen reader đọc */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Sử dụng property cursor để cung cấp thông tin về trạng thái của các phần tử */
+a {
+  /* Thay đổi con trỏ chuột khi hover vào link để cung cấp thông tin về trạng thái */
+  cursor: pointer;
+}
+
+/* Phần 4: Sử dụng media query để cải thiện Accessibility */
+/* Sử dụng media query để điều chỉnh kích thước và màu sắc của văn bản */
+@media (max-width: 768px) {
+  /* Giảm kích thước font-size khi màn hình nhỏ hơn 768px */
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Thay đổi màu nền và màu văn bản khi người dùng chọn chế độ tối */
+  body {
+    background-color: #333;
+    color: #fff;
+  }
+}
