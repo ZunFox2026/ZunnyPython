@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Đây là thẻ khai báo loại tài liệu HTML5 -->
+<html>
+<!-- Đây là thẻ gốc của tài liệu HTML -->
+<head>
+    <!-- Đây là phần đầu của tài liệu HTML, chứa thông tin về trang web -->
+    <title>Tạo hiệu ứng hình ảnh</title>
+    <!-- Đây là tiêu đề của trang web, hiển thị trên tab trình duyệt -->
+    <style>
+        /* Đây là phần CSS nội tuyến, dùng để tạo kiểu cho trang web */
+        body {
+            /* Tạo kiểu cho phần body của trang web */
+            background-color: #f2f2f2; /* Màu nền */
+            font-family: Arial, sans-serif; /* Kiểu chữ */
+        }
+        
+        .container {
+            /* Tạo kiểu cho phần chứa hình ảnh */
+            width: 80%; /* Chiều rộng */
+            margin: 40px auto; /* Khoảng cách */
+            text-align: center; /* Căn chỉnh văn bản */
+        }
+        
+        .image {
+            /* Tạo kiểu cho hình ảnh */
+            width: 50%; /* Chiều rộng */
+            height: 200px; /* Chiều cao */
+            border: 1px solid #ccc; /* Đường viền */
+            border-radius: 10px; /* Bo góc */
+            transition: transform 0.5s; /* Hiệu ứng chuyển đổi */
+        }
+        
+        .image:hover {
+            /* Tạo kiểu cho hình ảnh khi di chuột vào */
+            transform: scale(1.2); /* Phóng to hình ảnh */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tạo bóng */
+        }
+        
+        .text {
+            /* Tạo kiểu cho văn bản */
+            font-size: 18px; /* Cỡ chữ */
+            color: #666; /* Màu chữ */
+            margin-top: 20px; /* Khoảng cách */
+        }
+    </style>
+</head>
+<body>
+    <!-- Đây là phần nội dung của trang web -->
+    <div class="container">
+        <!-- Đây là phần chứa hình ảnh -->
+        <img class="image" src="https://picsum.photos/200/300" alt="Hình ảnh mẫu">
+        <!-- Đây là hình ảnh mẫu, thay thế bằng hình ảnh của bạn -->
+        <p class="text">Di chuột vào hình ảnh để xem hiệu ứng</p>
+        <!-- Đây là văn bản hướng dẫn -->
+    </div>
+</body>
+</html>
