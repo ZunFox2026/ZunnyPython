@@ -1,0 +1,93 @@
+/* Bài 17: Tạo hình ảnh phản chiếu */
+/* Tạo container cho hình ảnh */
+.container {
+  width: 500px;
+  height: 300px;
+  margin: 40px auto;
+  position: relative;
+}
+
+/* Tạo hình ảnh */
+.image {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://example.com/image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tạo hiệu ứng phản chiếu */
+.reflection {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  transform: scaleY(-1);
+}
+
+/* Thêm hiệu ứng chuyển động cho hình ảnh */
+.image:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Thêm hiệu ứng chuyển động cho hình ảnh phản chiếu */
+.reflection:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Tạo nhiều hình ảnh phản chiếu */
+.multiple-reflections {
+  position: relative;
+}
+
+.multiple-reflections .image {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://example.com/image.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.multiple-reflections .reflection {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  transform: scaleY(-1);
+}
+
+/* Tạo hình ảnh phản chiếu với nhiều hình dạng khác nhau */
+.circle-reflection {
+  position: relative;
+  border-radius: 50%;
+}
+
+.circle-reflection .image {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://example.com/image.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.circle-reflection .reflection {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  transform: scaleY(-1);
+  border-radius: 0 0 50% 50%;
+}
