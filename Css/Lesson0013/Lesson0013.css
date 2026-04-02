@@ -1,0 +1,64 @@
+/* Bài 13: Tìm hiểu về Media Queries */
+/* Media Queries là một cách để áp dụng các kiểu CSS khác nhau dựa trên các điều kiện nhất định, 
+   chẳng hạn như kích thước màn hình, loại thiết bị, hướng màn hình,... */
+
+/* Ví dụ 1: Áp dụng kiểu CSS dựa trên kích thước màn hình */
+/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên kích thước màn hình */
+@media (max-width: 768px) {
+  /* Khi màn hình có chiều rộng tối đa là 768px, áp dụng các kiểu CSS sau */
+  body {
+    background-color: #f2f2f2; /* Màu nền */
+    font-size: 16px; /* Kích thước chữ */
+  }
+}
+
+@media (min-width: 769px) {
+  /* Khi màn hình có chiều rộng tối thiểu là 769px, áp dụng các kiểu CSS sau */
+  body {
+    background-color: #fff; /* Màu nền */
+    font-size: 18px; /* Kích thước chữ */
+  }
+}
+
+/* Ví dụ 2: Áp dụng kiểu CSS dựa trên loại thiết bị */
+/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên loại thiết bị */
+@media (orientation: portrait) {
+  /* Khi thiết bị ở chế độ dọc, áp dụng các kiểu CSS sau */
+  body {
+    background-color: #ccc; /* Màu nền */
+  }
+}
+
+@media (orientation: landscape) {
+  /* Khi thiết bị ở chế độ ngang, áp dụng các kiểu CSS sau */
+  body {
+    background-color: #eee; /* Màu nền */
+  }
+}
+
+/* Ví dụ 3: Áp dụng kiểu CSS dựa trên hướng màn hình */
+/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên hướng màn hình */
+@media (min-resolution: 300dpi) {
+  /* Khi màn hình có độ phân giải tối thiểu là 300dpi, áp dụng các kiểu CSS sau */
+  body {
+    font-size: 20px; /* Kích thước chữ */
+  }
+}
+
+/* Ví dụ 4: Áp dụng kiểu CSS dựa trên màu sắc */
+/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên màu sắc */
+@media (prefers-color-scheme: dark) {
+  /* Khi người dùng chọn chế độ màu tối, áp dụng các kiểu CSS sau */
+  body {
+    background-color: #333; /* Màu nền */
+    color: #fff; /* Màu chữ */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* Khi người dùng chọn chế độ màu sáng, áp dụng các kiểu CSS sau */
+  body {
+    background-color: #fff; /* Màu nền */
+    color: #333; /* Màu chữ */
+  }
+}
