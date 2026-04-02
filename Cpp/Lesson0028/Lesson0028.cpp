@@ -1,35 +1,21 @@
 #include <iostream>
-#include <fstream>
-#include <string>
+#include <thread>
 
-using namespace std;
+// Hàm này sẽ được thực hiện bởi một luồng khác
+void hamLuongKhac() {
+    // In ra thông điệp từ luồng khác
+    std::cout << "Xin chào từ luồng khác!" << std::endl;
+}
 
 int main() {
-    // Tạo một tệp tin mới và ghi dữ liệu vào tệp
-    ofstream tepTinGhi("example.txt");
-    if (tepTinGhi.is_open()) {
-        // Ghi dữ liệu vào tệp
-        tepTinGhi << "Xin chào, thế giới!" << endl;
-        tepTinGhi << "Đây là một ví dụ về tệp tin." << endl;
-        tepTinGhi.close();
-        cout << "Đã ghi dữ liệu vào tệp thành công!" << endl;
-    } else {
-        cout << "Không thể mở tệp tin để ghi!" << endl;
-    }
+    // Tạo một luồng mới và gán hàm hamLuongKhac() cho nó
+    std::thread luongKhac(hamLuongKhac);
 
-    // Đọc dữ liệu từ tệp
-    ifstream tepTinDoc("example.txt");
-    if (tepTinDoc.is_open()) {
-        string dong;
-        while (getline(tepTinDoc, dong)) {
-            // In dữ liệu đọc được từ tệp
-            cout << dong << endl;
-        }
-        tepTinDoc.close();
-        cout << "Đã đọc dữ liệu từ tệp thành công!" << endl;
-    } else {
-        cout << "Không thể mở tệp tin để đọc!" << endl;
-    }
+    // In ra thông điệp từ luồng chính
+    std::cout << "Xin chào từ luồng chính!" << std::endl;
+
+    // Đợi cho luồng khác kết thúc trước khi tiếp tục
+    luongKhac.join();
 
     return 0;
 }
