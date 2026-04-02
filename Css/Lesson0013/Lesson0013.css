@@ -1,64 +1,57 @@
-/* Bài 13: Tìm hiểu về Media Queries */
-/* Media Queries là một cách để áp dụng các kiểu CSS khác nhau dựa trên các điều kiện nhất định, 
-   chẳng hạn như kích thước màn hình, loại thiết bị, hướng màn hình,... */
-
-/* Ví dụ 1: Áp dụng kiểu CSS dựa trên kích thước màn hình */
-/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên kích thước màn hình */
-@media (max-width: 768px) {
-  /* Khi màn hình có chiều rộng tối đa là 768px, áp dụng các kiểu CSS sau */
-  body {
-    background-color: #f2f2f2; /* Màu nền */
-    font-size: 16px; /* Kích thước chữ */
-  }
+/* Bài 13: Tạo hình nền */
+/* Phần 1: Tạo hình nền cơ bản */
+body {
+  /* Sử dụng thuộc tính background-color để tạo màu nền */
+  background-color: #f2f2f2;
 }
 
-@media (min-width: 769px) {
-  /* Khi màn hình có chiều rộng tối thiểu là 769px, áp dụng các kiểu CSS sau */
-  body {
-    background-color: #fff; /* Màu nền */
-    font-size: 18px; /* Kích thước chữ */
-  }
+/* Phần 2: Tạo hình nền bằng hình ảnh */
+.header {
+  /* Sử dụng thuộc tính background-image để tạo hình nền bằng hình ảnh */
+  background-image: url('background.jpg');
+  /* Sử dụng thuộc tính background-size để điều chỉnh kích thước hình ảnh */
+  background-size: cover;
+  /* Sử dụng thuộc tính background-position để điều chỉnh vị trí hình ảnh */
+  background-position: center;
+  /* Sử dụng thuộc tính background-repeat để điều chỉnh việc lặp lại hình ảnh */
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
-/* Ví dụ 2: Áp dụng kiểu CSS dựa trên loại thiết bị */
-/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên loại thiết bị */
-@media (orientation: portrait) {
-  /* Khi thiết bị ở chế độ dọc, áp dụng các kiểu CSS sau */
-  body {
-    background-color: #ccc; /* Màu nền */
-  }
+/* Phần 3: Tạo hình nền bằng gradient */
+.gradient {
+  /* Sử dụng thuộc tính background-image để tạo hình nền bằng gradient */
+  background-image: linear-gradient(to bottom, #ff0000, #0000ff);
+  height: 100vh;
 }
 
-@media (orientation: landscape) {
-  /* Khi thiết bị ở chế độ ngang, áp dụng các kiểu CSS sau */
-  body {
-    background-color: #eee; /* Màu nền */
-  }
+/* Phần 4: Tạo hình nền bằng hình ảnh và màu nền */
+.footer {
+  /* Sử dụng thuộc tính background để tạo hình nền bằng hình ảnh và màu nền */
+  background: url('background.jpg') no-repeat center / cover #f2f2f2;
+  height: 100vh;
 }
 
-/* Ví dụ 3: Áp dụng kiểu CSS dựa trên hướng màn hình */
-/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên hướng màn hình */
-@media (min-resolution: 300dpi) {
-  /* Khi màn hình có độ phân giải tối thiểu là 300dpi, áp dụng các kiểu CSS sau */
-  body {
-    font-size: 20px; /* Kích thước chữ */
-  }
+/* Phần 5: Tạo hình nền cho các phần tử khác */
+.button {
+  /* Sử dụng thuộc tính background-color để tạo màu nền cho nút bấm */
+  background-color: #4CAF50;
+  /* Sử dụng thuộc tính border-radius để tạo bo góc cho nút bấm */
+  border-radius: 5px;
+  /* Sử dụng thuộc tính padding để tạo khoảng cách cho nút bấm */
+  padding: 10px 20px;
 }
 
-/* Ví dụ 4: Áp dụng kiểu CSS dựa trên màu sắc */
-/* Đây là ví dụ về việc sử dụng media query để áp dụng kiểu CSS khác nhau dựa trên màu sắc */
-@media (prefers-color-scheme: dark) {
-  /* Khi người dùng chọn chế độ màu tối, áp dụng các kiểu CSS sau */
-  body {
-    background-color: #333; /* Màu nền */
-    color: #fff; /* Màu chữ */
-  }
+/* Phần 6: Tạo hình nền cho các trạng thái khác nhau */
+.button:hover {
+  /* Sử dụng thuộc tính background-color để tạo màu nền cho nút bấm khi di chuột */
+  background-color: #3e8e41;
 }
 
-@media (prefers-color-scheme: light) {
-  /* Khi người dùng chọn chế độ màu sáng, áp dụng các kiểu CSS sau */
+/* Phần 7: Tạo hình nền cho các màn hình khác nhau */
+@media only screen and (max-width: 768px) {
+  /* Sử dụng thuộc tính background-color để tạo màu nền cho màn hình di động */
   body {
-    background-color: #fff; /* Màu nền */
-    color: #333; /* Màu chữ */
+    background-color: #fff;
   }
 }
