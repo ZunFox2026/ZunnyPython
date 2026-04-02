@@ -1,0 +1,58 @@
+/* Bài 7: Tìm hiểu về Shadow */
+/* Phần này giải thích về thuộc tính box-shadow để tạo bóng cho phần tử */
+
+/* Ví dụ 1: Tạo bóng cho phần tử div */
+div {
+  /* Thuộc tính box-shadow gồm 4 giá trị: offset-x, offset-y, blur-radius, spread-radius và màu sắc */
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+
+/* Ví dụ 2: Tạo bóng cho phần tử button */
+button {
+  /* Sử dụng thuộc tính box-shadow với giá trị offset-x và offset-y khác nhau */
+  box-shadow: -5px 5px 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Ví dụ 3: Tạo bóng cho phần tử hình ảnh */
+img {
+  /* Sử dụng thuộc tính box-shadow với giá trị blur-radius lớn */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* Ví dụ 4: Tạo bóng cho phần tử có nhiều lớp bóng */
+div.lay-bong {
+  /* Sử dụng thuộc tính box-shadow với nhiều lớp bóng khác nhau */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.4), 0 0 30px 0 rgba(0, 0, 0, 0.6);
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+
+/* Phần này giải thích về thuộc tính text-shadow để tạo bóng cho văn bản */
+
+/* Ví dụ 5: Tạo bóng cho văn bản */
+p {
+  /* Thuộc tính text-shadow gồm 3 giá trị: offset-x, offset-y và màu sắc */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  color: #333;
+}
+
+/* Ví dụ 6: Tạo bóng cho văn bản với nhiều lớp bóng khác nhau */
+h1 {
+  /* Sử dụng thuộc tính text-shadow với nhiều lớp bóng khác nhau */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.6);
+  font-size: 48px;
+  color: #333;
+}
