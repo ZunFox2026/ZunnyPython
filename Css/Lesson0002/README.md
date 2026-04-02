@@ -1,45 +1,34 @@
-# Tìm hiểu về thuộc tính Overflow
+# Tìm hiểu về Media Query
 ## Giới thiệu
-Thuộc tính `overflow` là một trong những thuộc tính quan trọng trong CSS, giúp chúng ta kiểm soát cách hiển thị nội dung vượt quá kích thước của một phần tử. Khi một phần tử có chiều cao hoặc chiều rộng cố định, nhưng nội dung bên trong lại quá lớn, thuộc tính `overflow` sẽ quyết định cách xử lý phần nội dung vượt quá. Trong bài này, chúng ta sẽ tìm hiểu về thuộc tính `overflow` và cách sử dụng nó trong thiết kế web.
+Media Query là một tính năng trong CSS cho phép bạn áp dụng các样式 khác nhau tùy thuộc vào các điều kiện nhất định của thiết bị hoặc trình duyệt. Điều này giúp cho trang web của bạn có thể thích ứng với các kích thước màn hình khác nhau, từ điện thoại di động đến máy tính bảng và máy tính để bàn. Trong bài này, chúng ta sẽ tìm hiểu về cơ bản của Media Query và cách sử dụng nó để tạo ra các trang web đáp ứng.
 
 ## Lý thuyết
-Thuộc tính `overflow` có thể nhận các giá trị sau:
-- `visible`: Đây là giá trị mặc định, cho phép nội dung vượt quá kích thước của phần tử được hiển thị ra ngoài.
-- `hidden`: Nội dung vượt quá kích thước của phần tử sẽ bị ẩn đi.
-- `scroll`: Thêm thanh cuộn vào phần tử, cho phép người dùng cuộn lên xuống để xem nội dung vượt quá.
-- `auto`: Tương tự như `scroll`, nhưng thanh cuộn chỉ xuất hiện khi có nội dung vượt quá kích thước của phần tử.
-Ví dụ về sử dụng thuộc tính `overflow`:
+Media Query sử dụng cú pháp `@media` để xác định các điều kiện mà樣式 sẽ được áp dụng. Các điều kiện này có thể bao gồm chiều rộng và chiều cao của màn hình, độ phân giải, hướng của thiết bị (đứng hoặc nằm), v.v. Ví dụ, bạn có thể sử dụng Media Query để thay đổi kích thước phông chữ hoặc chiều rộng của một phần tử khi trang web được xem trên một thiết bị di động. Ví dụ CSS:
 ```css
-.example {
-  width: 200px;
-  height: 100px;
-  overflow: scroll;
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
 }
 ```
-Trong ví dụ trên, phần tử có lớp `example` sẽ có chiều rộng là 200px, chiều cao là 100px, và thêm thanh cuộn nếu nội dung vượt quá kích thước này.
+Điều này có nghĩa là khi chiều rộng của màn hình nhỏ hơn hoặc bằng 768px, kích thước phông chữ của phần tử `body` sẽ được đặt thành 16px.
 
 ## Ví dụ
-Để minh họa rõ hơn về cách sử dụng thuộc tính `overflow`, hãy xem xét ví dụ sau:
+Để minh họa rõ hơn về cách sử dụng Media Query, hãy xem xét một ví dụ khác. Giả sử bạn muốn tạo một trang web có thanh điều hướng nằm ngang trên máy tính để bàn nhưng chuyển thành thanh điều hướng dọc trên điện thoại di động. Bạn có thể sử dụng Media Query như sau:
 ```css
-.box {
-  width: 300px;
-  height: 200px;
-  border: 1px solid black;
-  overflow: auto;
+@media (min-width: 769px) {
+  nav {
+    flex-direction: row;
+  }
 }
 
-.content {
-  width: 350px;
-  height: 250px;
-  background-color: lightblue;
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
 }
 ```
-```html
-<div class="box">
-  <div class="content"></div>
-</div>
-```
-Trong ví dụ này, phần tử `.box` có kích thước cố định và thuộc tính `overflow` được thiết lập là `auto`. Phần tử `.content` bên trong có kích thước lớn hơn `.box`. Khi chạy ví dụ này, bạn sẽ thấy thanh cuộn xuất hiện trong phần tử `.box` để người dùng có thể xem toàn bộ nội dung của phần tử `.content`.
+Trong ví dụ này, khi chiều rộng của màn hình lớn hơn hoặc bằng 769px, thanh điều hướng sẽ được sắp xếp theo hàng ngang (`flex-direction: row`). Ngược lại, khi chiều rộng nhỏ hơn hoặc bằng 768px, thanh điều hướng sẽ được sắp xếp theo cột dọc (`flex-direction: column`).
 
 ## Bài tập
-Bài tập tiếp theo là tạo một trang web đơn giản với một hộp có chiều rộng và chiều cao cố định, và thêm nội dung văn bản vào hộp này. Sử dụng thuộc tính `overflow` để kiểm soát cách hiển thị nội dung khi nó vượt quá kích thước của hộp. Hãy thử nghiệm với các giá trị khác nhau của thuộc tính `overflow` như `visible`, `hidden`, `scroll`, và `auto` để xem sự khác biệt.
+Để thực hành sử dụng Media Query, bạn có thể thử tạo một trang web đơn giản với các phần tử như tiêu đề, ảnh và đoạn văn. Sau đó, sử dụng Media Query để thay đổi cách hiển thị của các phần tử này tùy thuộc vào kích thước màn hình. Ví dụ, bạn có thể thay đổi kích thước của tiêu đề, ẩn hoặc hiện các phần tử nhất định, hoặc thay đổi bố cục của trang web. Điều này sẽ giúp bạn hiểu rõ hơn về cách Media Query hoạt động và cách bạn có thể sử dụng nó để tạo ra các trang web đáp ứng và thân thiện với người dùng.
