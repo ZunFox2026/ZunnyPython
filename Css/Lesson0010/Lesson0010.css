@@ -1,68 +1,66 @@
-/* Bài 10: Tạo Hình Nền */
-/* Phần này sẽ giải thích về cách tạo hình nền cho trang web */
+/* Bài 10: Media Query */
+/* Media Query là một kỹ thuật trong CSS giúp định nghĩa các khối mã CSS khác nhau 
+   dựa trên các điều kiện cụ thể của thiết bị hoặc trình duyệt */
 
-/* Selector toàn bộ trang web */
-body {
-  /* Thiết lập màu nền cho trang web */
-  background-color: #f2f2f2;
-  /* Thiết lập hình nền cho trang web */
-  background-image: url('background.jpg');
-  /* Thiết lập cáchrepeat hình nền */
-  background-repeat: no-repeat;
-  /* Thiết lập vị trí hình nền */
-  background-position: center;
-  /* Thiết lập kích thước hình nền */
-  background-size: cover;
+/* Ví dụ 1: Áp dụng phong cách cho màn hình có chiều rộng tối đa 768px */
+@media only screen and (max-width: 768px) {
+  /* Thay đổi font-size và màu nền của body khi chiều rộng màn hình nhỏ hơn hoặc bằng 768px */
+  body {
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
 }
 
-/* Selector cho phần header */
-header {
-  /* Thiết lập màu nền cho phần header */
-  background-color: #333;
-  /* Thiết lập chiều cao cho phần header */
-  height: 100px;
-  /* Thiết lập màu chữ cho phần header */
-  color: #fff;
-  /* Thiết lập căn giữa cho phần header */
-  text-align: center;
+/* Ví dụ 2: Áp dụng phong cách cho màn hình có chiều rộng tối thiểu 769px */
+@media only screen and (min-width: 769px) {
+  /* Thay đổi font-size và màu nền của body khi chiều rộng màn hình lớn hơn hoặc bằng 769px */
+  body {
+    font-size: 18px;
+    background-color: #fff;
+  }
 }
 
-/* Selector cho phần nội dung */
-.content {
-  /* Thiết lập màu nền cho phần nội dung */
-  background-color: #fff;
-  /* Thiết lập kích thước phần nội dung */
-  width: 80%;
-  /* Thiết lập căn giữa cho phần nội dung */
-  margin: 0 auto;
-  /* Thiết lập padding cho phần nội dung */
-  padding: 20px;
+/* Ví dụ 3: Áp dụng phong cách cho màn hình có chiều rộng nằm trong khoảng 769px đến 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Thay đổi font-size và màu nền của body khi chiều rộng màn hình nằm trong khoảng 769px đến 1024px */
+  body {
+    font-size: 16px;
+    background-color: #eee;
+  }
 }
 
-/* Selector cho phần footer */
-footer {
-  /* Thiết lập màu nền cho phần footer */
-  background-color: #333;
-  /* Thiết lập chiều cao cho phần footer */
-  height: 50px;
-  /* Thiết lập màu chữ cho phần footer */
-  color: #fff;
-  /* Thiết lập căn giữa cho phần footer */
-  text-align: center;
+/* Ví dụ 4: Áp dụng phong cách cho thiết bị di động ( chiều rộng màn hình nhỏ hơn 480px ) */
+@media only screen and (max-width: 480px) {
+  /* Thay đổi font-size và màu nền của body khi chiều rộng màn hình nhỏ hơn 480px */
+  body {
+    font-size: 12px;
+    background-color: #ccc;
+  }
 }
 
-/* Ví dụ về cách sử dụng linear-gradient */
-.linear-gradient {
-  /* Thiết lập màu nền cho phần này */
-  background-image: linear-gradient(to bottom, #f2f2f2, #ccc);
-  /* Thiết lập chiều cao cho phần này */
-  height: 200px;
+/* Ví dụ 5: Áp dụng phong cách cho màn hình có chiều cao tối đa 600px */
+@media only screen and (max-height: 600px) {
+  /* Thay đổi font-size và màu nền của body khi chiều cao màn hình nhỏ hơn hoặc bằng 600px */
+  body {
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
 }
 
-/* Ví dụ về cách sử dụng radial-gradient */
-.radial-gradient {
-  /* Thiết lập màu nền cho phần này */
-  background-image: radial-gradient(circle, #f2f2f2, #ccc);
-  /* Thiết lập chiều cao cho phần này */
-  height: 200px;
+/* Ví dụ 6: Áp dụng phong cách cho màn hình có định hướng nằm ngang */
+@media only screen and (orientation: landscape) {
+  /* Thay đổi font-size và màu nền của body khi màn hình có định hướng nằm ngang */
+  body {
+    font-size: 16px;
+    background-color: #fff;
+  }
+}
+
+/* Ví dụ 7: Áp dụng phong cách cho màn hình có định hướng nằm dọc */
+@media only screen and (orientation: portrait) {
+  /* Thay đổi font-size và màu nền của body khi màn hình có định hướng nằm dọc */
+  body {
+    font-size: 14px;
+    background-color: #f2f2f2;
+  }
 }
