@@ -1,62 +1,56 @@
-/* Bài 9: Tổng quan về Media Query */
-/* Giới thiệu về Media Query, cho phép áp dụng các phong cách khác nhau tùy thuộc vào các điều kiện cụ thể */
+/* Bài 9: Tạo Hình Nền */
+/* Phần này sẽ tạo hình nền cho trang web */
 
-/* Ví dụ 1: Áp dụng phong cách cho màn hình có chiều rộng từ 768px trở lên */
-@media (min-width: 768px) {
-  /* Áp dụng font-size lớn hơn cho các phần tử trên màn hình lớn */
-  body {
-    font-size: 18px;
-  }
-  /* Thay đổi màu nền cho các phần tử có class 'container' */
-  .container {
-    background-color: #f2f2f2;
-  }
+/* Tạo hình nền cho toàn bộ trang web */
+body {
+  /* Sử dụng thuộc tính background-color để tạo màu nền */
+  background-color: #f2f2f2;
+  /* Sử dụng thuộc tính background-image để tạo hình nền */
+  background-image: url('hinhnen.jpg');
+  /* Sử dụng thuộc tính background-repeat để tạo hiệu ứng lặp lại hình nền */
+  background-repeat: no-repeat;
+  /* Sử dụng thuộc tính background-attachment để tạo hiệu ứng cố định hình nền */
+  background-attachment: fixed;
+  /* Sử dụng thuộc tính background-size để tạo hiệu ứng kích thước hình nền */
+  background-size: cover;
 }
 
-/* Ví dụ 2: Áp dụng phong cách cho màn hình có chiều rộng từ 480px đến 767px */
-@media (max-width: 767px) and (min-width: 480px) {
-  /* Áp dụng font-size nhỏ hơn cho các phần tử trên màn hình trung bình */
-  body {
-    font-size: 16px;
-  }
-  /* Thay đổi màu nền cho các phần tử có class 'header' */
-  .header {
-    background-color: #ccc;
-  }
+/* Tạo hình nền cho phần header */
+header {
+  /* Sử dụng thuộc tính background-color để tạo màu nền */
+  background-color: #333;
+  /* Sử dụng thuộc tính background-image để tạo hình nền */
+  background-image: url('hinhnenheader.jpg');
+  /* Sử dụng thuộc tính background-repeat để tạo hiệu ứng lặp lại hình nền */
+  background-repeat: repeat-x;
+  /* Sử dụng thuộc tính background-position để tạo hiệu ứng vị trí hình nền */
+  background-position: center top;
+  /* Sử dụng thuộc tính height để tạo hiệu ứng chiều cao */
+  height: 100px;
 }
 
-/* Ví dụ 3: Áp dụng phong cách cho màn hình có chiều rộng nhỏ hơn 480px */
-@media (max-width: 479px) {
-  /* Áp dụng font-size nhỏ nhất cho các phần tử trên màn hình nhỏ */
-  body {
-    font-size: 14px;
-  }
-  /* Thay đổi màu nền cho các phần tử có class 'footer' */
-  .footer {
-    background-color: #aaa;
-  }
+/* Tạo hình nền cho phần content */
+.content {
+  /* Sử dụng thuộc tính background-color để tạo màu nền */
+  background-color: #fff;
+  /* Sử dụng thuộc tính background-image để tạo hình nền */
+  background-image: url('hinhnencontent.jpg');
+  /* Sử dụng thuộc tính background-repeat để tạo hiệu ứng lặp lại hình nền */
+  background-repeat: repeat;
+  /* Sử dụng thuộc tính padding để tạo hiệu ứng khoảng cách */
+  padding: 20px;
 }
 
-/* Ví dụ 4: Áp dụng phong cách cho màn hình có hướng ngang */
-@media (orientation: landscape) {
-  /* Thay đổi màu nền cho các phần tử có class 'main' */
-  .main {
-    background-color: #eee;
-  }
-}
-
-/* Ví dụ 5: Áp dụng phong cách cho màn hình có hướng dọc */
-@media (orientation: portrait) {
-  /* Thay đổi màu nền cho các phần tử có class 'sidebar' */
-  .sidebar {
-    background-color: #ddd;
-  }
-}
-
-/* Ví dụ 6: Áp dụng phong cách cho màn hình có độ phân giải cao */
-@media (min-resolution: 2dppx) {
-  /* Thay đổi màu nền cho các phần tử có class 'high-resolution' */
-  .high-resolution {
-    background-color: #fff;
-  }
+/* Tạo hình nền cho phần footer */
+footer {
+  /* Sử dụng thuộc tính background-color để tạo màu nền */
+  background-color: #333;
+  /* Sử dụng thuộc tính background-image để tạo hình nền */
+  background-image: url('hinhnenfooter.jpg');
+  /* Sử dụng thuộc tính background-repeat để tạo hiệu ứng lặp lại hình nền */
+  background-repeat: repeat-x;
+  /* Sử dụng thuộc tính background-position để tạo hiệu ứng vị trí hình nền */
+  background-position: center bottom;
+  /* Sử dụng thuộc tính height để tạo hiệu ứng chiều cao */
+  height: 50px;
 }
