@@ -1,72 +1,70 @@
-# Làm việc với File
+# Xử lý tệp
 ## Giới thiệu
-Làm việc với file là một phần quan trọng trong lập trình, cho phép bạn lưu trữ và đọc dữ liệu từ các file trên đĩa cứng. Trong C++, bạn có thể sử dụng các hàm và đối tượng trong thư viện `<fstream>` để thực hiện các操作 này. Bài viết này sẽ giới thiệu về cách làm việc với file trong C++.
+Xử lý tệp là một phần quan trọng trong lập trình, cho phép chúng ta lưu trữ và đọc dữ liệu từ các tệp trên thiết bị. Trong C++, chúng ta có thể sử dụng các lớp và hàm trong thư viện chuẩn để thực hiện việc này. Bài viết này sẽ giới thiệu về cách xử lý tệp trong C++.
 
 ## Lý thuyết
-Để làm việc với file trong C++, bạn cần sử dụng các đối tượng sau:
-- `ifstream`: Đối tượng này được sử dụng để đọc dữ liệu từ một file.
-- `ofstream`: Đối tượng này được sử dụng để ghi dữ liệu vào một file.
-- `fstream`: Đối tượng này được sử dụng để đọc và ghi dữ liệu từ/đến một file.
+Trong C++, có hai loại tệp chính: tệp văn bản (text file) và tệp nhị phân (binary file). Tệp văn bản lưu trữ dữ liệu dưới dạng văn bản, trong khi tệp nhị phân lưu trữ dữ liệu dưới dạng nhị phân. Để xử lý tệp, chúng ta cần sử dụng các hàm và lớp sau:
+- `fstream`: lớp này cho phép chúng ta đọc và ghi tệp.
+- `ifstream`: lớp này cho phép chúng ta đọc tệp.
+- `ofstream`: lớp này cho phép chúng ta ghi tệp.
+- `open()`: hàm này mở tệp để đọc hoặc ghi.
+- `close()`: hàm này đóng tệp sau khi đọc hoặc ghi.
+- `read()`: hàm này đọc dữ liệu từ tệp.
+- `write()`: hàm này ghi dữ liệu vào tệp.
 
-Các hàm thường dùng khi làm việc với file:
-- `open()`: Mở một file để đọc hoặc ghi.
-- `close()`: Đóng một file sau khi đã đọc hoặc ghi xong.
-- `read()`: Đọc dữ liệu từ file vào một biến.
-- `write()`: Ghi dữ liệu từ một biến vào file.
-- `getline()`: Đọc một dòng từ file.
-
-Ví dụ sử dụng `ofstream` để ghi dữ liệu vào file:
+Ví dụ về cách mở và đóng tệp:
 ```cpp
 #include <fstream>
-using namespace std;
 
 int main() {
-    ofstream file("example.txt");
+    std::ofstream file("example.txt");
     if (file.is_open()) {
-        file << "Xin chào, thế giới!";
+        file << "Xin chào!";
         file.close();
-    } else {
-        cout << "Không thể mở file.";
     }
     return 0;
 }
 ```
 
 ## Ví dụ
-Dưới đây là ví dụ về việc đọc và ghi file:
+Dưới đây là ví dụ về cách đọc và ghi tệp văn bản:
 ```cpp
 #include <fstream>
 #include <iostream>
-using namespace std;
+#include <string>
 
 int main() {
-    // Ghi dữ liệu vào file
-    ofstream fileGhi("example.txt");
-    if (fileGhi.is_open()) {
-        fileGhi << "Đây là nội dung được ghi vào file.";
-        fileGhi.close();
-    } else {
-        cout << "Không thể mở file để ghi.";
+    // Ghi tệp
+    std::ofstream file("example.txt");
+    if (file.is_open()) {
+        file << "Xin chào!\n";
+        file << "Đây là một ví dụ về xử lý tệp.";
+        file.close();
     }
 
-    // Đọc dữ liệu từ file
-    ifstream fileDoc("example.txt");
-    if (fileDoc.is_open()) {
-        string dong;
-        while (getline(fileDoc, dong)) {
-            cout << dong << endl;
+    // Đọc tệp
+    std::ifstream readFile("example.txt");
+    if (readFile.is_open()) {
+        std::string line;
+        while (std::getline(readFile, line)) {
+            std::cout << line << std::endl;
         }
-        fileDoc.close();
-    } else {
-        cout << "Không thể mở file để đọc.";
+        readFile.close();
     }
     return 0;
 }
 ```
 
 ## Bài tập
-Bài tập 1: Tạo một chương trình cho phép người dùng nhập tên và tuổi, sau đó ghi thông tin này vào một file có tên là "thongtin.txt".
+Bài tập này yêu cầu bạn tạo một chương trình C++ để quản lý danh sách sinh viên. Chương trình sẽ có các chức năng sau:
+- Thêm sinh viên: thêm một sinh viên mới vào danh sách.
+- Liệt kê sinh viên: liệt kê tất cả các sinh viên trong danh sách.
+- Lưu danh sách: lưu danh sách sinh viên vào một tệp văn bản.
+- Đọc danh sách: đọc danh sách sinh viên từ một tệp văn bản.
 
-Bài tập 2: Tạo một chương trình đọc thông tin từ file "thongtin.txt" và hiển thị ra màn hình.
+Yêu cầu:
+- Tạo một cấu trúc `SinhVien` để lưu trữ thông tin về một sinh viên.
+- Tạo các hàm để thêm, liệt kê, lưu và đọc danh sách sinh viên.
+- Sử dụng các lớp và hàm trong thư viện chuẩn C++ để xử lý tệp.
 
-Bài tập 3: Tạo một chương trình cho phép người dùng thêm, xóa, sửa thông tin trong file "thongtin.txt".
+Khi hoàn thành, chương trình sẽ có thể thêm, liệt kê, lưu và đọc danh sách sinh viên từ một tệp văn bản.
